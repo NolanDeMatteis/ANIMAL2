@@ -6,10 +6,17 @@ public class Animal {
     protected int numberOfLegs;
     protected String diet;
 
+
+    // Requires setting/knowing parameters before initialization
     public Animal(boolean beingDangerous, int numberOfLegs, String diet){
         this.beingDangerous = beingDangerous;
         this.numberOfLegs = numberOfLegs;
         this.diet = diet;
+    }
+
+    // allows for setting after initialization
+    public Animal() {
+        // set nothing
     }
 
     public boolean isBeingDangerous() {
@@ -28,7 +35,13 @@ public class Animal {
         this.numberOfLegs = numberOfLegs;
     }
 
+
+//
     public String getDiet() {
+        if(diet == null){
+            return "variables null!";
+
+        }
         return diet;
     }
 
